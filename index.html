@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Implementing the CSS file and locating the CSS file-->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <meta charset="UTF-8" />
     <title> Run Buddy</title>
@@ -35,6 +36,7 @@
       <section>
           <div>
               <h3>Get Started Today</h3>
+              <!--Code below puts in the abillity to collect information from visitor-->
               <p>Fill out this form and one of our trainers will schedule a consult</p>
               <form>
                   <label for="name">Enter Full Name</label>
@@ -43,6 +45,7 @@
                   <input type="email" placeholder="Email Address" name="email" id="email"/>
                   <label for="phone">Enter Your Phone Number</label>
                   <input type="tel" placeholder="123-456-7890" name="phone" id="phone"/>
+                  <!--This code uses input type radio which allows users to select predertermined options-->
                   <p>
                       Have you wokred out with a trainer before?
                       <input type="radio" name="trainer-confirm" id="trainer-yes"/>
@@ -51,11 +54,13 @@
                       <label for="trainer-no">No</label>
                   </p>
                   <p>
+                      <!--simillar code to above however different type of input in the form of a checkbox-->
                       <label for="age">
                       I acnkowledge that I am at least 18 years of age.
                       </label>
                       <input type="checkbox" name="age-confirm" id="age"/>
                   </p>
+                  <!--BUTTON!-->
                   <button type="submit">
                    Get Running!
                    </button>
@@ -88,6 +93,7 @@
           <h2>❤️ Made with love by Run Buddy</h2>
           <div>
               <a href="#">Read Our Privacy Policy</a><br />
+              <!--&copy is how to insert the copyright symbol-->
               &copy; 2019 Run Buddy, Inc.
           </div>
       </footer>
