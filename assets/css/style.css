@@ -63,3 +63,13 @@ header h1{
     footer a {
         color: #024e76
     }
+
+    section { 
+        padding: 60px;
+        background-image: url("../images/hero-bg.jpg");
+    }
+
+    /*Hero Style Start*/
+    .hero{
+        background-image: url("../images/hero-bg.jpg")
+    }
