@@ -3,16 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/*setting up font and text color of body*/
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #39a6b2;
 }
+/*setting padding to make header fit better as well as color of header*/
 header{
     padding:20px 35px;
     background-color: #39a6b2;
 }
-
+/*adjusting text weight size color and fitting within header box*/
 header h1{
     font-weight: bold;
     font-size: 36px;
@@ -66,10 +67,64 @@ header h1{
 
     section { 
         padding: 60px;
-        background-image: url("../images/hero-bg.jpg");
     }
 
     /*Hero Style Start*/
     .hero{
-        background-image: url("../images/hero-bg.jpg")
+        background-image: url("../images/hero-bg.jpg");
+        height: 600px;
+        background-size: cover;
+        background-position: center;
+        /*setting hero sections position to relative for form positioning*/
+        position: relative;
+    }
+
+    .hero-form{
+        /*text color*/
+        color: #024e76;
+        /*background color*/
+        background-color: #fce138;
+        /*width and padding setting up internal dimensions of the form*/
+        width: 500px;
+        padding: 20px;
+        /*border code for form below*/
+        border-style: solid;
+        border-width: 3px;
+        border-color: #024e76;
+        /*there is a shortening for the 3 lines above that looks like this: border: solid 3px #024e76;*/
+        /*positioning code*/
+        position: absolute;
+        bottom: 120px;
+        right: 140px;
+    }
+
+    .hero-form h3{
+        font-size: 30px;
+        margin: 0px;
+    }
+
+    .hero-form p{
+        margin: 5px 0 15px 0;
+    }
+    /*form-input here targest those 3 input fields we just added the classes to*/
+    .form-input{
+        border: 1px solid #024e76;
+        display: block;
+        padding: 7px 15px;
+        font-size: 16px;
+        color: #024e76;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    /*slight change to radio buttons!*/
+    .hero-form label{
+        margin: 0 5px;
+    }
+    /*should know this but if not selecting the button section specifically to style!!*/
+    .hero-form button{
+        color: #fce138;
+        background-color: #024e76;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
     }
