@@ -129,9 +129,6 @@ header h1{
         padding: 10px 20px;
         font-size: 16px;
     }
-    .intro{
-        text-align: center;
-    }
     .intro p{
         line-height: 1.7;
         color: #39a6b2;
@@ -139,10 +136,10 @@ header h1{
         font-size: 20px;
         /*this functions similarily to dispaly inline-block used for centering a block element with a width of less than 100% horizontal only*/
         margin: 0 auto;
+        text-align: center;
     }
     /*altering text alignment image sizing backgrounds of the what you do section*/
     .steps{
-        text-align: center;
         background: #fce138;
     }
     .steps div{
@@ -164,11 +161,11 @@ header h1{
  .section-title{
     font-size: 55px;
     color: #024e76;
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px;
-    /*code below changing block element of the border to inline decrease length of border*/
-    display: inline-block;
     border-bottom: 3px solid;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
 }
  /*creating a border that can be applied throughout the page*/
     .primary-border{
@@ -182,7 +179,7 @@ header h1{
     }
     /*styling trainer section*/
     .trainers{
-        text-align: center;
+
     }
 .trainer{
     width: 900px;
@@ -228,7 +225,6 @@ header h1{
 /*creating background color for reach out aligning text proper title color too*/
 .contact{
     background: #024e76;
-    text-align: center;
 }
 
 .contact h2{
@@ -260,4 +256,6 @@ header h1{
 .contact-info a{
     color:#fce138;
 }
-/*reach out styling end*/
+.flex-row{
+    display: flex;
+}
