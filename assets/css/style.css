@@ -118,71 +118,71 @@ header h1{
         margin-bottom: 15px;
     }
     /*slight change to radio buttons!*/
-    .hero-form label{
-        margin: 0 5px;
-    }
-    /*should know this but if not selecting the button section specifically to style!!*/
-    .hero-form button{
-        color: #fce138;
-        background-color: #024e76;
-        border: none;
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-    .intro p{
-        line-height: 1.7;
-        color: #39a6b2;
-        width: 80%;
-        font-size: 20px;
-        /*this functions similarily to dispaly inline-block used for centering a block element with a width of less than 100% horizontal only*/
-        margin: 0 auto;
-        text-align: center;
-    }
+.hero-form label{
+    margin: 0 5px;
+}
+/*should know this but if not selecting the button section specifically to style!!*/
+.hero-form button{
+    color: #fce138;
+    background-color: #024e76;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+.intro p{
+    line-height: 1.7;
+    color: #39a6b2;
+    width: 80%;
+    font-size: 20px;
+    /*this functions similarily to dispaly inline-block used for centering a block element with a width of less than 100% horizontal only*/
+    margin: 0 auto;
+    text-align: center;
+}
     /*altering text alignment image sizing backgrounds of the what you do section*/
-    .steps{
-        background: #fce138;
-    }
-    .step{
-        margin: 50px auto;
-        padding-bottom: 50px;
-        width: 50%;
-        border-bottom: 1px solid #39a6b2;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .step-info{
-        flex: 2 70%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-    .step-img{
-        flex: 1 12%;
-        margin-right: 20px;
-    }
-    .step-img img {
-        max-width: 100%;
-    }
-    .step h3{
-       color: #024e76;
-       font-size: 46px;
-       flex: 1 30%;
-    }
-    .step-text{
-        flex: 12;
-    }
-    .step-text p{
-        color: #39a6b2;
-        font-size: 18px;
+.steps{
+    background: #fce138;
+}
+.step{
+    margin: 50px auto;
+    padding-bottom: 50px;
+    width: 50%;
+    border-bottom: 1px solid #39a6b2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.step-info{
+    flex: 2 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.step-img{
+    flex: 1 12%;
+    margin-right: 20px;
+}
+.step-img img {
+    max-width: 100%;
+}
+.step h3{
+   color: #024e76;
+   font-size: 46px;
+   flex: 1 30%;
+}
+.step-text{
+    flex: 12;
+}
+.step-text p{
+    color: #39a6b2;
+    font-size: 18px;
 
-    }
-    .step-text h4 {
-        font-size: 26px;
-        line-height: 1.5;
-        color: #024e76;
-    }
+}
+.step-text h4 {
+    font-size: 26px;
+    line-height: 1.5;
+    color: #024e76;
+}
  .section-title{
     font-size: 55px;
     color: #024e76;
@@ -193,33 +193,35 @@ header h1{
     width: 50%;
 }
  /*creating a border that can be applied throughout the page*/
-    .primary-border{
-        border-color: #fce138;
-    }
-    .secondary-border{
-        border-color: #39a6b2;
-    }
-    /*styling trainer section*/
-    .trainers{
-
-    }
+.primary-border{
+    border-color: #fce138;
+}
+.secondary-border{
+    border-color: #39a6b2;
+}
+/*styling trainer section*/
 .trainer{
-    width: 900px;
-    margin: 0 auto 30px auto;
+    margin: 20px;
     background: #024e76;
     color: #fce138;
+    flex: 1;
+}
+.trainers{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.trainer img{
+    width: 100%;
     overflow: auto;
 }
-    .trainer img{
-        width: 35%;
-        float: left;
-        overflow: auto;
-    }
-.trainer-bio{
-    padding: 35px;
-    float: left;
-    width: 65%;
+.trainer-bio {
+    padding: 25px;
     overflow: auto;
+    line-height: 1.3;
 }
 .text-left{
     text-align: left;
@@ -229,19 +231,17 @@ header h1{
 }
 /*cleaning up trainer box text*/
 .trainer-bio h3{
-    font-size: 32px;
-    margin-bottom: 8px;
+    font-size: 28px;
 }
 
 .trainer-bio h4{
     font-weight: lighter;
-    font-size: 26px;
-    margin-bottom: 25px;
+    font-size: 22px;
+    margin-bottom: 15px;
 }
 
 .trainer-bio p{
     font-size: 17px;
-    line-height: 1.3;
 }
 /*styling reach out section*/
 /*creating background color for reach out aligning text proper title color too*/
