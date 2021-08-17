@@ -1,3 +1,8 @@
+:root{
+    --primary-color: #fce138;
+    --secondary-color: #024e76;
+    --tertiary-color:#39a6b2;
+}
 *{
     margin: 0;
     padding: 0;
@@ -26,12 +31,14 @@ header {
     background-position: 80%;
     /*background-attachment will make the header and hero backgrounds blend together better, changing position to 80% helps them blend*/
     background-attachment: fixed;
+    /*to prevent new input boxes from appearing through header when scrolling*/
+    z-index: 9999;
 }
 /*adjusting text weight size color and fitting within header box*/
 header h1{
     font-weight: bold;
     font-size: 36px;
-    color: #fce138;
+    color: var(--primary-color);
     margin: 0;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -77,78 +84,132 @@ header h1{
         line-height: 1.5;
         text-align: right;
     }
-    footer a{
-        color: #024e76
-    }
-    section{ 
-        padding: 60px;
-    }
+footer a{
+    color: #024e76;
+}
+section{ 
+    padding: 60px;
+}
     /*Hero Style Start*/
-    .hero{
-        background-image: url("../images/hero-bg.jpg");
-        background-size: cover;
-        background-position: center;
-        /*setting up flexbox here for an adjustable hero section depending on view size*/
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        background-attachment: fixed;
-        background-position: 80%;
-    }
-    .hero-cta {
-        width: 35%;
-        text-align: right;
-        margin: 3.5%;
-        color: #fff;
-        font-size: 19px;
-        line-height: 1.2;
-    }
-    .hero-cta h2{
-        font-style: italic;
-        font-size: 55px;
-        color: #fce138;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-    .hero-form{
-        /*text color*/
-        color: #024e76;
-        /*background color*/
-        background-color: rgba(252, 225, 56, 0.8);
-        padding: 20px;
-        /*border code for form below*/
-        border-style: solid;
-        border-width: 3px;
-        border-color: #024e76;
-        width: 40%;
-        margin: 3.5%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        border-radius: 15px;
-    }
-    .hero-form h3{
-        font-size: 30px;
-        margin: 0px;
-    }
-    .hero-form p{
-        margin: 5px 0 15px 0;
-    }
-    /*form-input here targest those 3 input fields we just added the classes to*/
-    .form-input{
-        border: 1px solid #024e76;
-        display: block;
-        padding: 7px 15px;
-        font-size: 16px;
-        color: #024e76;
-        width: 100%;
-        margin-bottom: 15px;
-        border-radius: 10px;
-        background-color: rgba(255,255,255, 0.75);
-    }
-    .from-input:focus{
-        background-color: rgba(255,255,255, 1);
-        outline: none;
-    }
-    /*slight change to radio buttons!*/
+.hero{
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    /*setting up flexbox here for an adjustable hero section depending on view size*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
+}
+.hero-cta {
+    width: 35%;
+    text-align: right;
+    margin: 3.5%;
+    color: #fff;
+    font-size: 19px;
+    line-height: 1.2;
+}
+.hero-cta h2{
+    font-style: italic;
+    font-size: 55px;
+    color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.hero-form{
+    /*text color*/
+    color: #024e76;
+    /*background color*/
+    background-color: rgba(252, 225, 56, 0.8);
+    padding: 20px;
+    /*border code for form below*/
+    border-style: solid;
+    border-width: 3px;
+    border-color: #024e76;
+    width: 40%;
+    margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+.hero-form h3{
+    font-size: 30px;
+    margin: 0px;
+}
+.hero-form p{
+    margin: 5px 0 15px 0;
+}
+/*form-input here targest those 3 input fields we just added the classes to*/
+.form-input{
+    border: 1px solid #024e76;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: #024e76;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+}
+.from-input:focus{
+    background-color: rgba(255,255,255, 1);
+    outline: none;
+}
+.checkbox-wrapper input, .radio-wrapper input {
+    opacity: 0;
+}
+.checkbox-wrapper label, .radio-wrapper label{
+    position: relative;
+    left: 10px;
+    margin: 10px;
+    line-height: 1.6;
+}
+.checkbox-wrapper label::before, .radio-wrapper label::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    background: rgba(255,255,255, 0.75);
+    border: 1px solid #024e76;
+    position: absolute;
+    top: -4px;
+    left: -30px;
+}
+.radio-wrapper label::before{
+    border-radius: 50%;
+}
+.radio-wrapper label::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #024e76;
+  position: absolute;
+  left: -29px;
+  top: -3px;
+  background-image: radial-gradient(circle, #39a6b2, #024e76);
+}
+
+.checkbox-wrapper label::after {
+  content: "";
+  height: 6px;
+  width: 14px;
+  border-left: 2px solid #024e76;
+  border-bottom: 2px solid #024e76;
+  position: absolute;
+  left: -26px;
+  top: 1px;
+  transform: rotate(-58deg);
+}
+.checkbox-wrapper input + label::after,
+.radio-wrapper input + label::after {
+    content: none;
+}
+
+.checkbox-wrapper input:checked + label::after,
+.radio-wrapper input:checked + label::after {
+    content: "";
+}
+/*slight change to radio buttons!*/
 .hero-form label{
     margin: 0 5px;
 }

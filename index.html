@@ -46,30 +46,33 @@
               <form>
                   <!--added classes to first 3 inputs to be able to adjust only these 3 in css!-->
                   <label for="name">Enter Full Name</label>
-                  <input type="text" placeholder="Your Name" name="name" id="name" class="form-input"/>
+                  <input type="text" placeholder="Your Name" name="name" id="name" class="form-input" />
                   <label for="email">Enter Your Email Address</label>
-                  <input type="email" placeholder="Email Address" name="email" id="email"class="form-input"/>
+                  <input type="email" placeholder="Email Address" name="email" id="email" class="form-input" />
                   <label for="phone">Enter Your Phone Number</label>
-                  <input type="tel" placeholder="123-456-7890" name="phone" id="phone"class="form-input"/>
+                  <input type="tel" placeholder="123-456-7890" name="phone" id="phone" class="form-input" />
                   <!--This code uses input type radio which allows users to select predertermined options-->
                   <p>
-                      Have you wokred out with a trainer before?
-                      <input type="radio" name="trainer-confirm" id="trainer-yes"/>
-                      <label for="trainer-yes">Yes</label>
-                      <input type="radio" name="trainer-confirm" id="trainer-no"/>
-                      <label for="trainer-no">No</label>
+                      Have you worked out with a trainer before?
+                      <span class="radio-wrapper">
+                          <input type="radio" name="trainer-confirm" id="trainer-yes" />
+                          <label for="trainer-yes">Yes</label>
+                      </span>
+                      <span class="radio-wrapper">
+                          <input type="radio" name="trainer-confirm" id="trainer-no" />
+                          <label for="trainer-no">No</label>
+                      </span>
                   </p>
                   <p>
-                      <!--simillar code to above however different type of input in the form of a checkbox-->
-                      <label for="age">
-                      I acnkowledge that I am at least 18 years of age.
-                      </label>
-                      <input type="checkbox" name="age-confirm" id="age"/>
+                      <span class="checkbox-wrapper">
+                          <input type="checkbox" name="age-confirm" id="checkbox" />
+                          <label for="checkbox">I acknowledge that I am at least 18 years of age.</label>
+                      </span>
                   </p>
                   <!--BUTTON!-->
                   <button type="submit">
-                   Get Running!
-                   </button>
+                      Get Running!
+                  </button>
               </form>
            </div>
       </section>
