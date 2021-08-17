@@ -9,12 +9,23 @@ body{
     color: #39a6b2;
 }
 /*setting padding to make header fit better as well as color of header*/
-header{
-    padding:20px 35px;
+header {
+    padding: 20px 35px;
     background-color: #39a6b2;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    /*this is what allows the header to be sticky*/
+    position: sticky;
+    /*this lets the sticky header work on safari which doesnt support the normal declaration*/
+    position: -webkit-sticky;
+    /*top declaration tells where the header to be 0 means very top*/
+    top: 0;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: 80%;
+    /*background-attachment will make the header and hero backgrounds blend together better, changing position to 80% helps them blend*/
+    background-attachment: fixed;
 }
 /*adjusting text weight size color and fitting within header box*/
 header h1{
@@ -22,6 +33,7 @@ header h1{
     font-size: 36px;
     color: #fce138;
     margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
     header a{
         text-decoration: none;
@@ -36,11 +48,18 @@ header h1{
         justify-content: space-between;
         align-items: center;
         list-style: none;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
     header nav ul li a{
         padding: 10px 15px;
         font-weight: lighter;
         font-size: 1.55vw;
+    }
+    header nav ul li a:hover{
+        background: #fce138;
+        color: #024e76;
+        border-radius: 15px;
+        text-shadow: none;
     }
     footer{
         background: #fce138;
@@ -74,6 +93,8 @@ header h1{
         justify-content: center;
         flex-wrap: wrap;
         align-items: flex-start;
+        background-attachment: fixed;
+        background-position: 80%;
     }
     .hero-cta {
         width: 35%;
@@ -87,12 +108,13 @@ header h1{
         font-style: italic;
         font-size: 55px;
         color: #fce138;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
     .hero-form{
         /*text color*/
         color: #024e76;
         /*background color*/
-        background-color: #fce138;
+        background-color: rgba(252, 225, 56, 0.8);
         padding: 20px;
         /*border code for form below*/
         border-style: solid;
@@ -100,6 +122,8 @@ header h1{
         border-color: #024e76;
         width: 40%;
         margin: 3.5%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
     }
     .hero-form h3{
         font-size: 30px;
@@ -117,6 +141,12 @@ header h1{
         color: #024e76;
         width: 100%;
         margin-bottom: 15px;
+        border-radius: 10px;
+        background-color: rgba(255,255,255, 0.75);
+    }
+    .from-input:focus{
+        background-color: rgba(255,255,255, 1);
+        outline: none;
     }
     /*slight change to radio buttons!*/
 .hero-form label{
@@ -129,6 +159,10 @@ header h1{
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 15px;
+}
+.hero-form button:hover{
+    background-color: #39a6b2;
 }
 .intro p{
     line-height: 1.7;
@@ -147,12 +181,15 @@ header h1{
     margin: 50px auto;
     padding-bottom: 50px;
     width: 50%;
-    border-bottom: 1px solid #39a6b2;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
+/*this will add the bottom border to all child elements except the last one*/
+    .step:not(:last-child) {
+        border-bottom: 1px solid #39a6b2;
+    }
 .step-info{
     flex: 2 70%;
     display: flex;
@@ -284,6 +321,13 @@ header h1{
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+}
+.contact-form input:focus, .contact-form textarea:focus{
+    background-color: rgba(255,255,255, 1);
+    outline: none;
+
 }
 .contact-form button{
     width: 100%;
@@ -293,6 +337,11 @@ header h1{
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 10px;
+}
+.contact-form button:hover{
+    color: #fce138;
+    background: #39a6b2;
 }
 .contact-info a{
     color:#fce138;
@@ -305,6 +354,7 @@ header h1{
     header{
         padding-bottom: 0;
         justify-content: center;
+        position: relative;
     }
     header h1{
         width: 100%;
@@ -344,25 +394,21 @@ header h1{
     section {
         padding: 30px 15px;
     }
-
     .step h3 {
         flex: 1 100%;
         text-align: center;
     }
-
     .step-info {
         flex: 2 100%;
         text-align: center;
         justify-content: center;
     }
-
     .step-img {
         flex: 0 32%;
         margin-right: 0;
         margin-top: 15px;
         margin-bottom: 15px;
     }
-
     .step-text {
         flex: 100%;
     }
@@ -372,28 +418,22 @@ header h1{
     .hero-form button {
         width: 100%;
     }
-
     .section-title {
         width: 95%;
     }
-
     .intro p {
         width: 100%;
     }
-
     .trainer {
         flex: 0 100%;
     }
-
     .contact-info {
         text-align: center;
     }
-
     .contact-info > * {
         flex: 0 100%;
     }
     .contact-form {
         order: 3;
     }
-    
 }
